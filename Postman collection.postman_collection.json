@@ -15,7 +15,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(201);",
+							"    pm.response.to.have.status(200);",
 							"});",
 							"",
 							"",
@@ -35,11 +35,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://httpbin.org/get?isGood=true&isBad=false",
-					"protocol": "https",
+					"raw": "{{url}}/get?isGood=true&isBad=false",
 					"host": [
-						"httpbin",
-						"org"
+						"{{url}}"
 					],
 					"path": [
 						"get"
